@@ -2,8 +2,9 @@
   (:require [goog.object :as gobj]
             [cljs-spa.state :refer [!state]]
             [reagent.core :as r]
-            [doublebundle.router5 :as router5]
-            [doublebundle.router5-browser-plugin :as router5-browser-plugin]))
+            ["noty" :as noty]
+            ["router5" :as router5]
+            ["router5/plugins/browser" :as router5-browser-plugin]))
 
 (defn handle-load-error [e]
   (when (-> e ex-data :load-error)
@@ -12,7 +13,7 @@
 
 (defn handle-rejection [e]
   (js/console.error e)
-  (-> (js/noty. #js{:text (.-message e), :type "error", :timeout 1500})
+  (-> (noty. #js{:text (.-message e), :type "error", :timeout 1500})
       .show))
 
 (defn middleware* [name->route to-state from-state]

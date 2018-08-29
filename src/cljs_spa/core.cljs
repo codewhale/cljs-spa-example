@@ -12,8 +12,11 @@
                                :render-fn (fn [props] [routes/switch-ui props])}]
             (.getElementById js/document "app")))
 
-(defn re-init []
+(defn re-init
+  {:dev/after-load true}
+  []
   (let [router (re-init-router)]
     (.start router (fn [err] (if err (throw err) (re-render router))))))
 
-(re-init)
+(defn init []
+  (re-init))

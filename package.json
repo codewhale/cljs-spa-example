@@ -1,5 +1,6 @@
 {
-  "name": "doublebundle",
+  "name": "cljs-spa-example",
+  "private": true,
   "version": "1.0.0",
   "author": "Paulus Esterhazy",
   "license": "MIT",
@@ -12,11 +13,6 @@
     "router5": "^6.4.2"
   },
   "devDependencies": {
-    "webpack": "4.12.0",
-    "webpack-cli": "3.0.4"
-  },
-  "main": "library.js",
-  "scripts": {
-    "postinstall": "webpack --config webpack.config.js -p"
+    "shadow-cljs": "2.6.4"
   }
 }

@@ -36,3 +36,10 @@ Thumbs.db
 /.rebel_readline_history
 /dist
 /target-prod
+
+resources/public/js
+node_modules/
+/report.html
+.shadow-cljs
+.idea
+*.iml

@@ -1,3 +1,21 @@
+shadow-cljs commands
+```
+npm install
+npx shadow-cljs watch app
+open http://localhost:9333
+
+# while watch is running
+npx shadow-cljs cljs-repl app
+
+# advanced build (stop watch first)
+npx shadow-cljs release app
+
+# build report
+npx shadow-cljs run shadow.cljs.build-report app report.html
+```
+
+--
+
 Single Page Applications (SPAs) in ClojureScript, while often simple, are not always easy to understand. This example project demonstrates what I think is the best way to build SPAs today.
 
 ## Usage
